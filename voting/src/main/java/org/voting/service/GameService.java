@@ -26,7 +26,7 @@ public class GameService {
         return newGame;
     }
 
-    public void voteById(String id) {
+    public void voteById(Long id) {
         voteDao.incrementVote(id);
     }
 }

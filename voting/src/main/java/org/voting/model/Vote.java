@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Vote {
-    private String gameId;
+    private long gameId;
     private Integer voteCount;
 }

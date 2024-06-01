@@ -12,13 +12,13 @@ public class VoteDao {
     private static final String KEY = "games";
 
     @Resource(name="redisTemplate")
-    private ZSetOperations<String, String> zSetOps;
+    private ZSetOperations<String, Long> zSetOps;
 
     public void addNewVote(Vote vote) {
         zSetOps.add(KEY, vote.getGameId(), vote.getVoteCount().doubleValue());
     }
 
-    public void incrementVote(String id) {
+    public void incrementVote(Long id) {
         zSetOps.incrementScore(KEY, id, 1);
     }
 }

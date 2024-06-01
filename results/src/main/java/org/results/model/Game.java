@@ -1,18 +1,22 @@
 package org.results.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class Game {
+    @jakarta.persistence.Id
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private long id;
     private String name;
     private String description;
     private String publisher;

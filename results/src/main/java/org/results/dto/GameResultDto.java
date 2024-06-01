@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class GameResultDto {
-    private String id;
+    private long id;
     private String name;
     private Integer voteCount;
 }
