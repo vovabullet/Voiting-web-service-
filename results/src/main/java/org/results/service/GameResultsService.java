@@ -6,8 +6,8 @@ import org.results.repo.VoteResultsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @Service
@@ -19,9 +19,7 @@ public class GameResultsService {
 
     public List<GameResultDto> getTopGames() {
         return voteResultsDao.getTopGames().stream()
-                .peek(item -> item.setName(gameRepo.findById(item.getId())
-                        .orElseThrow(() -> new NoSuchElementException("Game not found for id: " + item.getId()))
-                        .getName()))
+                .peek(item -> item.setName(gameRepo.findById(item.getId()).get().getName()))
                 .collect(Collectors.toList());
     }
 }

@@ -15,7 +15,7 @@ public class VoteResultsDao {
     private static final String KEY = "games";
 
     @Resource(name="redisTemplate")
-    private ZSetOperations<String, Long> zSetOps;
+    private ZSetOperations<String, String> zSetOps;
 
     public List<GameResultDto> getTopGames() {
         return zSetOps.reverseRangeWithScores(KEY, 0, 2).stream()
