@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.14494.240">
-    <data-source name="database" uuid="7e095504-d189-465f-bbb8-b781b9b49ecd">
+    <data-source name="database" uuid="bf5729f6-bcf4-4faf-876c-805f2b5d87f0">
       <database-info product="HSQL Database Engine" version="2.7.0" jdbc-version="4.2" driver-name="HSQL Database Engine Driver" driver-version="2.7.0" dbms="HSQLDB" exact-version="2.7.0" exact-driver-version="2.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
