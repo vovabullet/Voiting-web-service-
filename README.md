@@ -36,9 +36,9 @@
 
 ## Концептуальная структура проекта
 
-![image](https://github.com/user-attachments/assets/2e21698f-201d-419f-ae0b-c715049bb3d6)
-
 ## Схема проекта
+
+![image](https://github.com/user-attachments/assets/2e21698f-201d-419f-ae0b-c715049bb3d6)
 
 ## Описание работы веб-сервиса
 
