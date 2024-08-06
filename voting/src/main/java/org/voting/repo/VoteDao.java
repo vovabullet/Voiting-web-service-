@@ -1,7 +1,6 @@
 package org.voting.repo;
 
 import jakarta.annotation.Resource;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

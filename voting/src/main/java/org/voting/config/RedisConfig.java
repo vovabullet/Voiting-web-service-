@@ -13,16 +13,12 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 public class RedisConfig {
-
     @Value("${spring.redis.host}")
     private String redisHost;
-
     @Value("${spring.redis.port}")
     private int redisPort;
-
     @Value("${spring.redis.password}")
     private String redisPassword;
-
     @Bean
     public RedisConnectionFactory redisConnectionFactory() {
         RedisStandaloneConfiguration config = new RedisStandaloneConfiguration();
@@ -31,7 +27,6 @@ public class RedisConfig {
         config.setPassword(RedisPassword.of(redisPassword));
         return new LettuceConnectionFactory(config);
     }
-
     @Bean
     public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory connectionFactory) {
         RedisTemplate<String, String> template = new RedisTemplate<>();
@@ -42,7 +37,6 @@ public class RedisConfig {
         template.setHashValueSerializer(new StringRedisSerializer());
         return template;
     }
-
     @Bean
     public ZSetOperations<String, String> zSetOperations(RedisTemplate<String, String> redisTemplate) {
         return redisTemplate.opsForZSet();

@@ -2,8 +2,6 @@ package org.results.repo;
 
 import jakarta.annotation.Resource;
 import org.results.dto.GameResultDto;
-import org.results.model.Game;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +18,6 @@ public class VoteResultsDao {
 
     @Resource(name="redisTemplate")
     private ZSetOperations<String, String> zSetOps;
-
     // Метод для проверки наличия ключа 'games'
     public boolean checkIfKeyExists() {
         Boolean exists = zSetOps.getOperations().hasKey(KEY);
